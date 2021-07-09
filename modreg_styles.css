@@ -1,0 +1,69 @@
+html, body {
+    height: 100%;
+    padding: 0;
+    margin: 0;
+    font-family: Avenir Next;
+}
+
+/* --------------------------------------------------------------------------------------------------- */
+
+#header {
+    /* width: 100%;    */
+    height: 50px;
+    /* background-color: red; */
+    border-bottom: 0.5px solid black;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+}
+
+#header #back-acads {
+    width: 120px;
+    height: 37px;
+    border-radius: 5px;
+    background-color: #2e86de;
+    font-family: Avenir Next;
+    border: none;
+    outline: none;
+    color: white;
+    font-weight: bold;
+    font-size: 14px;
+    margin: auto 20px;
+}
+
+#header #selector {
+    margin: auto 0;
+    border: none;
+    font-family: Avenir Next;
+    outline: none
+}
+
+#header #go-home {
+    margin: auto 20px;
+}
+
+/* --------------------------------------------------------------------------------------------------- */
+
+#sidebar {
+    position: absolute;
+    left: 0;
+    top: 50px;
+    bottom: 0;
+    width: 250px;
+    background-color: rebeccapurple;
+}
+
+.sb-option {
+    width: 100%;
+    height: 40px;
+    border-bottom: 1px solid black;
+}
+
+.sb-option .opt-title {
+    color: black;
+    padding-left: 10px;
+}

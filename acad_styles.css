@@ -1,0 +1,69 @@
+html, body {
+    height: 100%;
+    padding: 0;
+    margin: 0;
+    font-family: Avenir Next;
+}
+
+/* --------------------------------------------------------------------------------------------------- */
+
+#header {
+    width: 100%;   
+    height: 80px;
+    border-bottom: 0.5px solid black;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+#header #logo {
+    margin: auto 20px;
+}
+
+#header #selector {
+    margin: auto 0;
+    border: none;
+    font-family: Avenir Next;
+    outline: none
+}
+
+#header #go-home {
+    margin: auto 20px;
+}
+
+/* --------------------------------------------------------------------------------------------------- */
+
+#container {
+    width: 840px;
+    height: 640px;
+    background-color: rebeccapurple;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    margin: 0 auto;
+}
+
+.card {
+    width: 200px;
+    height: 200px;
+    border-radius: 7px;
+    margin: 5px;
+    color: white;
+    background-color: #2e86de;
+    display: flex;
+    text-align: center;
+}
+
+.card .card-title {
+    font-size: 20px;
+    font-weight: 700;
+    text-align: center;
+    margin: auto auto;
+}
+
+.card:hover {
+    opacity: 0.6;
+    cursor: pointer;
+    transition: 0.5s;
+}

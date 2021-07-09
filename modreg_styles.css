@@ -88,10 +88,22 @@ html, body {
     right: 0;
 }
 
+/* --------------------------------------------------------------------------------------------------- */
+
 #about-panel {
-    background-color: rebeccapurple;
+    /* background-color: rebeccapurple; */
     display: none;
+    padding: 25px;
 }
+
+#about-panel #about-title {
+    font-size: 40px;
+    padding: 10px 0;
+    font-weight: bold;
+    color: #54a0ff;
+}
+
+/* --------------------------------------------------------------------------------------------------- */
 
 #view-panel {
     background-color: lightcoral;

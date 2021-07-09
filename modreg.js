@@ -21,6 +21,10 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const pageTitle = document.getElementById('page-title')
 
+    // load the about panel on page load
+    pageTitle.innerText = 'About ModReg@EduRec'
+    modSelectPanel.style.display = 'block'
+
     function switchPanel(idx) {
         var panels = [
             aboutPanel, 

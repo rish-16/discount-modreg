@@ -80,15 +80,50 @@ html, body {
 
 /* --------------------------------------------------------------------------------------------------- */
 
-#playground {
+.panel {
     position: absolute;
     top: 50px;
     bottom: 0;
     left: 250px;
     right: 0;
-    background-color: rebeccapurple;
 }
 
-/* #playground {
+#about-panel {
+    background-color: rebeccapurple;
+    display: none;
+}
 
-} */
+#view-panel {
+    background-color: lightcoral;
+    display: none;
+}
+
+#modsel-panel {
+    background-color: lightgreen;
+    display: none;
+}
+
+#modreq-panel {
+    background-color: lightsalmon;
+    display: none;
+}
+
+#selecttut-panel {
+    background-color: lightpink;
+    display: none;
+}
+
+#addswap-panel {
+    background-color: lightslategray;
+    display: none;
+}
+
+#drop-panel {
+    background-color: lightgoldenrodyellow;
+    display: none;
+}
+
+#appeals-panel {
+    background-color: lightcyan;
+    display: none;
+}

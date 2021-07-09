@@ -6,6 +6,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
         <script src="https://kit.fontawesome.com/4467197cc4.js" crossorigin="anonymous"></script>
+        <script src="modreg.js"></script>
         <link rel="stylesheet" href="modreg_styles.css">
         <title>Homepage</title>
     </head>
@@ -18,7 +19,7 @@
                 </a>
             </button>
 
-            <p id="selector">NUS Module Registration</p>
+            <p id="page-title">NUS Module Registration</p>
 
             <p id="go-home">
                 <a href="index.html" style="color: black; text-decoration: none;"><i class="fas fa-home"></i></a>
@@ -26,37 +27,46 @@
         </div>
 
         <div id="sidebar">
-            <div class="sb-option">
+            <div class="sb-option" id="about">
                 <p class="opt-title"><i style="padding-right: 5px;" class="fas fa-book"></i> About ModReg@EduRec</p>
             </div>
 
-            <div class="sb-option">
+            <div class="sb-option" id="viewclasses">
                 <p class="opt-title"><i style="padding-right: 5px;" class="fas fa-table"></i> View My Classess@ModReg</p>
             </div>
 
-            <div class="sb-option">
+            <div class="sb-option" id="modselect">
                 <p class="opt-title"><i style="padding-right: 5px;" class="fas fa-shopping-cart"></i> Select Modules</p>
             </div>
 
-            <div class="sb-option">
+            <div class="sb-option" id="modreq">
                 <p class="opt-title"><i style="padding-right: 5px;" class="fas fa-arrows-alt-h"></i> Submit Module Requests</p>
             </div>
 
-            <div class="sb-option">
+            <div class="sb-option" id="selecttut">
                 <p class="opt-title"><i style="padding-right: 5px;" class="fas fa-user-friends"></i> Select Tutorials/Labs</p>
             </div>
 
-            <div class="sb-option">
+            <div class="sb-option" id="addswap">
                 <p class="opt-title"><i style="padding-right: 5px;" class="fas fa-retweet"></i> Add/Swap Tutorials/Labs</p>
             </div>
             
-            <div class="sb-option">
+            <div class="sb-option" id="drop">
                 <p class="opt-title"><i style="padding-right: 5px;" class="fas fa-stop-circle"></i> Drop Classes</p>
             </div>
 
-            <div class="sb-option">
+            <div class="sb-option" id="appeals">
                 <p class="opt-title"><i style="padding-right: 5px;" class="fas fa-receipt"></i> Submit Appeals/Inquiries</p>
             </div>
         </div>
+
+        <div id="about-panel"></div>
+        <div id="view-panel"></div>
+        <div id="modsel-panel"></div>
+        <div id="modreq-panel"></div>
+        <div id="selecttut-panel"></div>
+        <div id="addswap-panel"></div>
+        <div id="drop-panel"></div>
+        <div id="appeals-panel"></div>
     </body>
 </html>

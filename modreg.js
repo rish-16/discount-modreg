@@ -373,6 +373,22 @@ document.addEventListener('DOMContentLoaded', () => {
     modSelPopupClose.addEventListener('click', () => {
         console.log('Closing popup')
         modSelPopup.style.display = 'none'
+
+        modResultsTable.innerHTML = `
+        <div id="modsel-search-result-header">
+            <p style="width: 20%; font-weight: bold;">Class</p>
+            <p style="width: 20%; font-weight: bold;">Activity</p>
+            <p style="width: 10%; font-weight: bold;">Session</p>
+            <p style="width: 10%; font-weight: bold;">Vacancy</p>
+            <p style="width: 25%; font-weight: bold;">Students Selected</p>
+            <p style="width: 15%; font-weight: bold;"></p>
+        </div>`
+
+        popupResultSubjectInput.value = ''
+        popupResultNbrInput.value = ''
+        popupResultModTitleInput.value = ''
+
+        popupResultBannerTitle.innerHTML = ''        
     })
 
     function addModToTable(modTitleText, modUnitText, modRankText) {
@@ -493,7 +509,7 @@ document.addEventListener('DOMContentLoaded', () => {
             // module found
             return allmods[key]
         } else {
-            popupResultBannerTitle.innerHTML = `Module ${key} not found. Try again with another search query.`
+            popupResultBannerTitle.innerHTML = `Module ${key} not found. Please refine your search by entering a different keyword.`
         }
     }
 

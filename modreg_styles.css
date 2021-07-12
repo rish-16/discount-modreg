@@ -295,6 +295,7 @@ input[type=number] {
 
 #modsel-panel #modsel-final-mods-container #modsel-final-mods-container-header p {
     margin: auto 0;
+    font-weight: bold;
     padding: 0 15px;
 }
 

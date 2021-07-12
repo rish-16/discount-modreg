@@ -99,23 +99,70 @@
         
         <div class="panel" id="modsel-panel">
             <div id="modsel-info">
-                <p>Seniority: SCI3</p>
-                <p>Module Feedback Points: 0</p>
-                <p>Number of MCs allocated: 0</p>
-                <p>Max Number of MCs that can be taken in this Round: 23</p>
-                <p>Number of MCs to meeting min. Workload: 18</p>
-                <p>Number of MCs you would like to enrol in for this round: <input type="text" id="mc-point"></p>
+                <p>Seniority: <strong>SCI3</strong></p>
+                <p>Module Feedback Points: <strong>0</strong></p>
+                <p>Number of MCs allocated: <strong>0</strong></p>
+                <p>Max Number of MCs that can be taken in this Round: <strong>23</strong></p>
+                <p>Number of MCs to meeting min. Workload: <strong>18</strong></p>
+                <p>Number of MCs you would like to enrol in for this round: <input type="text" id="modsel-mc-setter"></p>
 
-                <button id="modsel-submit">Add classes</button>
+                <button id="modsel-submit">Add Class</button>
+                <!-- <button id="modsel-rank">Rank Modules</button> -->
+                <!-- <button id="modsel-remove">Delete Class</button> -->
             </div>
         
-            <p id="modsel-title">Select Modules</p>
+            <!-- <p id="modsel-title">Select Modules</p> -->
+
+            <div id="modsel-final-mods-container">
+                <div id="modsel-final-mods-container-header">
+                    <p style="width: 40%;">Module Name</p>
+                    <p style="width: 7%;">Units</p>
+                    <p style="width: 10%;">Rank</p>
+                    <p style="width: 12%;">Status</p>
+                    <p style="width: 15%;"></p>
+                    <p style="width: 8%;"></p>
+                </div>
+                
+                <!-- <div class="mod">
+                    <p class="mod-title">CS1101S Programming Methodology I</p>
+                    <p class="mod-units">4.00</p>
+                    <p class="mod-rank">1</p>
+                    <p class="mod-status">Not Selected</p>
+                    <p class="mod-edit">Edit/View Details</p>
+                    <p class="mod-remove">Remove</p>
+                </div> -->
+            </div>
+        </div>
+
+        <div id="modsel-select-popup">
+            <div id="modsel-popup-header">
+                <button id="modsel-popup-close">Cancel</button>
+                <p id="modsel-popup-tite">Select Modules</p>
+                <span></span>
+            </div>
 
             <div id="modsel-container">
-                <p id="modsel-container-desc">Search for Modules <i class="fas fa-info-circle" style="color: #54a0ff;"></i></p>
+                <p style="font-size: 15px; font-weight: bold; padding-left: 10px;" id="modsel-container-desc">Search for Modules <i class="fas fa-info-circle" style="color: #54a0ff; padding-left: 5px;"></i></p>
 
-                <p class="modsel-container-field-text">Subject: <p style="color: #54a0ff;">(select subject)</p></p>
-                
+                <p class="modsel-container-field-text" id="modsel-container-subject">* Subject: <span style="color: #54a0ff; font-weight: 500;">(select subject)</span></p>
+                <input type="text" id="modsel-container-subject-input">
+                <br>
+
+                <p class="modsel-container-field-text" id="modsel-container-catalog-nbr">Catalog Nbr:</p>
+                <input type="text" id="modsel-container-catalog-nbr-input">
+                <br>
+
+                <p class="modsel-container-field-text" id="modsel-container-mod-title">Module Title:</p>
+                <input type="text" id="modsel-container-subject-mod-title-input">
+                <br>
+
+                <button id="modsel-search">Search</button>
+            </div>
+
+            <hr style="margin: 20px 0;">
+
+            <div id="modsel-search-result-container">
+
             </div>
         </div>
         

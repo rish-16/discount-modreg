@@ -1,0 +1,41 @@
+{
+    "modules": {
+        "CS": {
+            "CS1101S": {
+                "code": "CS1101S",
+                "title": "Programming Methodology I"
+            },
+            "CS1231S": {
+                "code": "CS1231S",
+                "title": "Discrete Structures"
+            },
+            "CS2030S": {
+                "code": "CS2030S",
+                "title": "Programming Methodology II"
+            }
+        },
+        "BT": {
+            
+        },
+        "IS": {
+
+        },
+        "CEG": {
+
+        },
+        "MA": {
+            "MA1101R": {
+                "code": "MA1101R",
+                "title": "Linear Algebra I"
+            },
+            "MA1521": {
+                "code": "MA1521",
+                "title": "Calculus for Computing"
+            },
+            "MS1102R": {
+                "code": "MA1102R",
+                "title": "Calculus I"
+            }
+        }
+    }
+}

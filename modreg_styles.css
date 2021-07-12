@@ -119,9 +119,70 @@ input[type=number] {
 /* --------------------------------------------------------------------------------------------------- */
 
 #view-panel {
-    background-color: lightcoral;
+    background-color: white;
     display: none;
     padding: 25px;
+    overflow: scroll;
+}
+
+#view-banner-title {
+    font-weight: bold;
+    font-size: 15px;
+    padding: 20;
+}
+
+#view-banner-subtitle {
+    font-size: 14px;
+    padding: 20;
+}
+
+.view-mod-title {
+    font-size: 16px;
+    color: #e4aa46;
+    font-weight: bold;
+    margin: 5px 0 0 0;
+    padding: 0;
+}
+
+.view-mod-container {
+    width: 100%;
+    height: 200px;
+    margin-top: 20px;   
+}
+
+.view-container-header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    height: 45px;
+    width: 100%;
+    margin: 0;
+    background-color: rgb(226, 226, 226);
+    border: 1px solid black;
+}
+
+.view-container-header p {
+    margin: auto 0;
+    font-weight: bold;
+    padding: 0 15px;
+}
+
+.view-container-item {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    height: 45px;
+    width: 100%;
+    margin: 0;
+    background-color: white;
+    border-bottom: 1px solid black;
+    border-left: 1px solid black;
+    border-right: 1px solid black;
+}
+
+.view-container-item p {
+    margin: auto 0;
+    padding: 0 15px;
 }
 
 /* --------------------------------------------------------------------------------------------------- */
@@ -228,10 +289,6 @@ input[type=number] {
     padding: 0;
     margin: auto 0;
     color: #e58e26;
-}
-
-#modsel-search-result-container {
-
 }
 
 #modsel-select-popup #modsel-container .modsel-container-field-text {

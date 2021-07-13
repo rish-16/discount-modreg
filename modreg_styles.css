@@ -505,7 +505,7 @@ input[type=number] {
 }
 
 #rickroll-panel {
-    background-color: lightcoral;
+    background-color: white;
     padding: 25px;
     display: none;
 }

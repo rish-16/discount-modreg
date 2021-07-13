@@ -503,3 +503,15 @@ input[type=number] {
     background-color: lightcyan;
     display: none;
 }
+
+#rickroll-panel {
+    background-color: lightcoral;
+    padding: 25px;
+    display: none;
+}
+
+#rickroll-panel #rickroll-banner-title {
+    font-weight: bold;
+    font-size: 25;
+    margin: 20px 0;
+}

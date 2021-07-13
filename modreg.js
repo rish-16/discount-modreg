@@ -260,6 +260,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const addSwapBtn = document.getElementById('addswap')
     const dropBtn = document.getElementById('drop')
     const appealsBtn = document.getElementById('appeals')
+    const rickrollBtn = document.getElementById('rickroll')
 
     const aboutPanel = document.getElementById('about-panel')
     const viewClassesPanel = document.getElementById('view-panel')
@@ -269,6 +270,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const addSwapPanel = document.getElementById('addswap-panel')
     const dropPanel = document.getElementById('drop-panel')
     const appealsPanel = document.getElementById('appeals-panel')
+    const rickrollPanel = document.getElementById('rickroll-panel')
 
     const pageTitle = document.getElementById('page-title')
 
@@ -299,7 +301,8 @@ document.addEventListener('DOMContentLoaded', () => {
             selectTutPanel,
             addSwapPanel,
             dropPanel,
-            appealsPanel
+            appealsPanel,
+            rickrollPanel
         ]
 
         for (var i=0, item; item = panels[i]; i++) {
@@ -359,6 +362,12 @@ document.addEventListener('DOMContentLoaded', () => {
         console.log('Appeals clicked')
         pageTitle.innerText = 'Submit Appeals/Inquiries'
         switchPanel(7)
+    })
+
+    rickrollBtn.addEventListener('click', () => {
+        console.log('Rickroll clicked')
+        pageTitle.innerText = 'CS1101S Cheatsheets'
+        switchPanel(8)
     })
 
     addClassBtn.addEventListener('click', () => {

@@ -383,21 +383,7 @@ document.addEventListener('DOMContentLoaded', () => {
         console.log('Closing popup')
         modSelPopup.style.display = 'none'
 
-        modResultsTable.innerHTML = `
-        <div id="modsel-search-result-header">
-            <p style="width: 20%; font-weight: bold;">Class</p>
-            <p style="width: 20%; font-weight: bold;">Activity</p>
-            <p style="width: 10%; font-weight: bold;">Session</p>
-            <p style="width: 10%; font-weight: bold;">Vacancy</p>
-            <p style="width: 25%; font-weight: bold;">Students Selected</p>
-            <p style="width: 15%; font-weight: bold;"></p>
-        </div>`
-
-        popupResultSubjectInput.value = ''
-        popupResultNbrInput.value = ''
-        popupResultModTitleInput.value = ''
-
-        popupResultBannerTitle.innerHTML = ''        
+        flush()    
     })
 
     function addModToTable(modTitleText, modUnitText, modRankText) {
@@ -475,11 +461,7 @@ document.addEventListener('DOMContentLoaded', () => {
         selectBtn.classList += 'mod-res-select-btn'
         modPlaceholder.appendChild(selectBtn)
 
-        selectBtn.addEventListener('click', () => {
-            modSelPopup.style.display = 'none' // hide search popup
-            addModToTable(details['detailed-name'], details['units'], curRank)
-            curRank += 1
-
+        function flush() {
             console.log('flushing')
 
             // flush
@@ -498,6 +480,14 @@ document.addEventListener('DOMContentLoaded', () => {
             popupResultModTitleInput.value = ''
 
             popupResultBannerTitle.innerHTML = ''
+        }
+
+        selectBtn.addEventListener('click', () => {
+            modSelPopup.style.display = 'none' // hide search popup
+            addModToTable(details['detailed-name'], details['units'], curRank)
+            curRank += 1
+
+            flush()
         })
 
         mod.appendChild(modClass)

@@ -309,6 +309,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // load the about panel on page load
     pageTitle.innerText = 'About ModReg@EduRec'
+    document.title = 'About ModReg@EduRec'
     aboutPanel.style.display = 'block'
 
     function switchPanel(idx) {
@@ -338,54 +339,63 @@ document.addEventListener('DOMContentLoaded', () => {
     aboutBtn.addEventListener('click', () => {
         console.log('About clicked')
         pageTitle.innerText = 'About ModReg@EduRec'
+        document.title = 'About ModReg@EduRec'
         switchPanel(0)
     })
 
     viewClassesBtn.addEventListener('click', () => {
         console.log('View Classes clicked')
         pageTitle.innerText = 'View My Classes@ModReg'
+        document.title = 'View My Classes@ModReg'
         switchPanel(1)
     })
 
     modSelectBtn.addEventListener('click', () => {
         console.log('Module Select clicked')
         pageTitle.innerText = 'Select Modules'
+        document.title = 'Select Modules'
         switchPanel(2)
     })
 
     modReqBtn.addEventListener('click', () => {
         console.log('Mod Requests clicked')
         pageTitle.innerText = 'Submit Module Requests'
+        document.title = 'Submit Module Requests'
         switchPanel(3)
     })
 
     selectTutBtn.addEventListener('click', () => {
         console.log('Select Tutorials clicked')
         pageTitle.innerText = 'Select Tutorials/Labs'
+        document.title = 'Select Tutorials/Labs'
         switchPanel(4)
     })
 
     addSwapBtn.addEventListener('click', () => {
         console.log('Add Swap clicked')
         pageTitle.innerText = 'Add/Swap Tutorials/Labs'
+        document.title = 'Add/Swap Tutorials/Labs'
         switchPanel(5)
     })
 
     dropBtn.addEventListener('click', () => {
         console.log('Drop clicked')
         pageTitle.innerText = 'Drop Classes'
+        document.title = 'Drop Classes'
         switchPanel(6)
     })
 
     appealsBtn.addEventListener('click', () => {
         console.log('Appeals clicked')
         pageTitle.innerText = 'Submit Appeals/Inquiries'
+        document.title = 'Submit Appeals/Inquiries'
         switchPanel(7)
     })
 
     rickrollBtn.addEventListener('click', () => {
         console.log('Rickroll clicked')
         pageTitle.innerText = 'CS1101S Cheatsheets'
+        document.title = 'CS1101S Cheatsheets'
         switchPanel(8)
     })
 

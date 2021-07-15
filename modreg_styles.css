@@ -495,9 +495,18 @@ input[type=number] {
 /* --------------------------------------------------------------------------------------------------- */
 
 #modreq-panel {
-    background-color: lightsalmon;
+    background-color: white;
     display: none;
+    padding: 25px;
+    overflow: scroll;
 }
+
+#modreq-title {
+    font-size: 14px;
+    font-weight: bold;
+}
+
+/* --------------------------------------------------------------------------------------------------- */
 
 #selecttut-panel {
     background-color: lightpink;
@@ -535,8 +544,9 @@ input[type=number] {
 
 #drop-mod-container {
     width: 100%;
-    height: 200px;
+    height: auto;
     margin-top: 20px;   
+    margin-bottom: 10px;
 }
 
 #drop-container-header {
@@ -574,7 +584,7 @@ input[type=number] {
     padding: 0 15px;
 }
 
-.mod-drop-select-btn {
+#mod-drop-select-btn {
     width: 60px;
     height: 37px;
     font-size: 13px;
@@ -591,8 +601,74 @@ input[type=number] {
 /* --------------------------------------------------------------------------------------------------- */
 
 #appeals-panel {
-    background-color: lightcyan;
+    background-color: white;
     display: none;
+    padding: 25px;
+    overflow: scroll;
+}
+
+#add-appeals-btn {
+    width: 175px;
+    height: 37px;
+    font-size: 13px;
+    border: none;
+    outline: none;
+    border-radius: 5px;
+    background-color: #54a0ff;
+    font-family: Avenir Next;
+    font-weight: 600;
+    box-shadow: 1px 2px 2px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    color: white;
+}
+
+#add-appeals-btn:hover {
+    opacity: 0.5;
+    transform: scale(1.01);
+    transition: 0.5s;
+}
+
+#appeals-container {
+    width: 100%;
+    height: auto;
+    margin-top: 20px;   
+    margin-bottom: 10px;
+}
+
+#appeals-container-header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    height: 35px;
+    width: 100%;
+    margin: 0;
+    background-color: rgb(226, 226, 226);
+    border: 1px solid black;
+}
+
+#appeals-container-header p {
+    margin: auto 0;
+    font-size: 14px;
+    font-weight: bold;
+    padding: 0 15px;
+}
+
+.appeals-item {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    height: 50px;
+    width: 100%;
+    margin: 0;
+    background-color: white;
+    border-bottom: 1px solid black;
+    border-left: 1px solid black;
+    border-right: 1px solid black;
+}
+
+.appeals-item p {
+    margin: auto 0;
+    padding: 0 15px;
 }
 
 /* --------------------------------------------------------------------------------------------------- */

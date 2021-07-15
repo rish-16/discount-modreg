@@ -31,6 +31,7 @@
 
             <p id="go-home">
                 <a href="index.html" style="color: black; text-decoration: none;"><i class="fas fa-home"></i></a>
+                <i style="padding-left: 15px;" class="fas fa-ellipsis-v"></i>
             </p>
         </div>
 
@@ -145,22 +146,13 @@
                     <p style="width: 30%;">Status</p>
                 </div>
                 <div class="view-container-item">
-                    <p style="color: #62abc4; width: 10%;">L-L32-2341</p>
+                    <p style="color: #62abc4; width: 10%; cursor: pointer;">L-L32-2341</p>
                     <p style="width: 15%;">Tutorial</p>
                     <p style="width: 10%;">Regular</p>
                     <p style="width: 10%;">4.00</p>
                     <p style="width: 30%;">Enrolled</p>
                 </div>
             </div>
-
-            <!-- <p class="view-mod-title">GER1000 Quantitative Reasoning</p>
-            <div class="view-container-header">
-                <p style="width: 30%;">Class</p>
-                <p style="width: 20%;">Activity</p>
-                <p style="width: 20%;">Session</p>
-                <p style="width: 10%;">Units</p>
-                <p style="width: 2%;">Status</p>
-            </div> -->
         </div>
         
         <div class="panel" id="modsel-panel">
@@ -239,7 +231,9 @@
             </div>
         </div>
         
-        <div class="panel" id="modreq-panel"></div>
+        <div class="panel" id="modreq-panel">
+            <p id="modreq-title">This function is not applicable to Undergraduate students.</p>
+        </div>
         
         <div class="panel" id="selecttut-panel"></div>
         
@@ -250,39 +244,62 @@
 
             <div id="drop-mod-container">
                 <div id="drop-container-header">
-                    <p style="width: 10%;">Module</p>
+                    <p style="width: 5%;">Select</p>
+                    <p style="width: 15%;">Module</p>
                     <p style="width: 15%;">Class</p>
                     <p style="width: 10%;">Activity</p>
                     <p style="width: 10%;">Session</p>
                     <p style="width: 10%;">Units</p>
-                    <p style="width: 20%;">Select</p>
                 </div>
 
-                <div class="drop-container-item">
-                    <p style="width: 10%;">CS1101S</p>
-                    <p style="color: #62abc4; width: 15%;">L-L1-1226</p>
+                <div class="drop-container-item" id="cs1101s-box">
+                    <p style="width: 5%">
+                        <input type="checkbox" id="cs1101s-cb">
+                    </p>
+                    <p style="width: 15%;">CS1101S</p>
+                    <p style="color: #62abc4; width: 15%; cursor: pointer;">L-L1-1226</p>
                     <p style="width: 10%;">Lecture</p>
                     <p style="width: 10%;">Regular</p>
                     <p style="width: 10%;">4.00</p>
-                    <p style="width: 20%">
-                        <button class="mod-drop-select-btn">Drop</button>
-                    </p>
                 </div>
 
-                <div class="drop-container-item">
-                    <p style="width: 10%;">GER1000</p>
-                    <p style="color: #62abc4; width: 15%;">L-L32-2341</p>
+                <div class="drop-container-item" id="ger1000-box">
+                    <p style="width: 5%">
+                        <input type="checkbox" id="ger1000-cb">
+                    </p>
+                    <p style="width: 15%;">GER1000</p>
+                    <p style="color: #62abc4; width: 15%; cursor: pointer;">L-L32-2341</p>
                     <p style="width: 10%;">Tutorial</p>
                     <p style="width: 10%;">Regular</p>
                     <p style="width: 10%;">4.00</p>
-                    <p style="width: 20%">
-                        <button class="mod-drop-select-btn">Drop</button>
-                    </p>
                 </div>
-            </div>            
+            </div>
+
+            <button id="mod-drop-select-btn">Drop</button>
         </div>
         
-        <div class="panel" id="appeals-panel"></div>
+        <div class="panel" id="appeals-panel">
+            <button id="add-appeals-btn">Add Appeals/Inquiries</button>
+            <div id="appeals-container">
+                <div id="appeals-container-header">
+                    <p style="width: 10%;">Appeal Nbr.</p>
+                    <p style="width: 20%;">Appeal Type</p>
+                    <p style="width: 5%;">Status</p>
+                    <p style="width: 10%;">View Details</p>
+                    <p style="width: 15%;">Allow to Cancel*</p>
+                </div>
+
+                <div class="appeals-item">
+                    <p style="width: 10%;">1</p>
+                    <p style="width: 20%;">Unable to secure module</p>
+                    <p style="width: 5%;">Closed</p>
+                    <p style="width: 10%; color: #62abc4; cursor: pointer;">View Details</p>
+                    <p style="width: 15%;">No</p>
+                </div>
+            </div>
+
+            <p style="margin-top: 20px; font-size: 13px;" id="appeals-msg">*<strong><u>Note</u>:</strong> To cancel appeal(s) which has not been processed, click "Yes".</p>
+        </div>
 
         <div class="panel" id="rickroll-panel">
             <p id="rickroll-banner-title">Yah, no.</p>

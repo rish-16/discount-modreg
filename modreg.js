@@ -298,6 +298,13 @@ document.addEventListener('DOMContentLoaded', () => {
     const popupResultBannerTitle = document.getElementById('mod-result-title')
     const modResultsTable = document.getElementById('modsel-search-result-container')
 
+    const dropCurModsContainer = document.getElementById('drop-mod-container')
+    const cs1101sCB = document.getElementById('cs1101s-cb')
+    const get1000CB = document.getElementById('ger1000-cb')
+    const cs1101sBox = document.getElementById('cs1101s-box')
+    const ger1000Box = document.getElementById('ger1000-box')
+    const dropSelectedModsBtn = document.getElementById('mod-drop-select-btn')
+
     var curRank = 1 // maintains next highest rank in Table
 
     // load the about panel on page load
@@ -598,5 +605,25 @@ document.addEventListener('DOMContentLoaded', () => {
         // make a row for the module in results
         // on select, render row in main mod table
         addModToResults(details)
+    })
+
+    dropSelectedModsBtn.addEventListener('click', () => {
+        var mods = [
+            cs1101sCB,
+            get1000CB
+        ]
+
+        var items = [
+            cs1101sBox,
+            ger1000Box
+        ]
+
+        for (var i=0, cb, box; cb = mods[i], box=items[i]; i++) {
+            // Look no need to do list[i] in the body of the loop
+            // console.log("Looping: index ", i, "item" + item);
+            if (cb.checked) {
+                dropCurModsContainer.removeChild(box)
+            }
+        }
     })
 })

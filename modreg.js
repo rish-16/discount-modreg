@@ -258,7 +258,7 @@ const ALLMODS = `{
 }`
 
 document.addEventListener('DOMContentLoaded', () => {
-    console.log('App loaded.')
+    console.log('Welcome, inquisitive SOC student! Not much to see here :D')
 
     const header = document.getElementById('header')
     const sidebar = document.getElementById('sidebar')
@@ -327,80 +327,67 @@ document.addEventListener('DOMContentLoaded', () => {
 
         for (var i=0, item; item = panels[i]; i++) {
             // Look no need to do list[i] in the body of the loop
-            // console.log("Looping: index ", i, "item" + item);
             item.style.display = 'none'
         }
-
-        console.log(`Showing panel ${idx}.`)
 
         panels[idx].style.display = 'block'
     }
 
     aboutBtn.addEventListener('click', () => {
-        console.log('About clicked')
         pageTitle.innerText = 'About ModReg@EduRec'
         document.title = 'About ModReg@EduRec'
         switchPanel(0)
     })
 
     viewClassesBtn.addEventListener('click', () => {
-        console.log('View Classes clicked')
         pageTitle.innerText = 'View My Classes@ModReg'
         document.title = 'View My Classes@ModReg'
         switchPanel(1)
     })
 
     modSelectBtn.addEventListener('click', () => {
-        console.log('Module Select clicked')
         pageTitle.innerText = 'Select Modules'
         document.title = 'Select Modules'
         switchPanel(2)
     })
 
     modReqBtn.addEventListener('click', () => {
-        console.log('Mod Requests clicked')
         pageTitle.innerText = 'Submit Module Requests'
         document.title = 'Submit Module Requests'
         switchPanel(3)
     })
 
     selectTutBtn.addEventListener('click', () => {
-        console.log('Select Tutorials clicked')
         pageTitle.innerText = 'Select Tutorials/Labs'
         document.title = 'Select Tutorials/Labs'
         switchPanel(4)
     })
 
     addSwapBtn.addEventListener('click', () => {
-        console.log('Add Swap clicked')
         pageTitle.innerText = 'Add/Swap Tutorials/Labs'
         document.title = 'Add/Swap Tutorials/Labs'
         switchPanel(5)
     })
 
     dropBtn.addEventListener('click', () => {
-        console.log('Drop clicked')
         pageTitle.innerText = 'Drop Classes'
         document.title = 'Drop Classes'
         switchPanel(6)
     })
 
     appealsBtn.addEventListener('click', () => {
-        console.log('Appeals clicked')
         pageTitle.innerText = 'Submit Appeals/Inquiries'
         document.title = 'Submit Appeals/Inquiries'
         switchPanel(7)
     })
 
     rickrollBtn.addEventListener('click', () => {
-        console.log('Rickroll clicked')
         pageTitle.innerText = 'CS1101S Cheatsheets'
         document.title = 'CS1101S Cheatsheets'
         switchPanel(8)
     })
 
     addClassBtn.addEventListener('click', () => {
-        console.log('Adding class')
         modSelPopup.style.display = 'block'
 
         var panels = [
@@ -420,7 +407,6 @@ document.addEventListener('DOMContentLoaded', () => {
         sidebar.style.opacity = 0.2
         for (var i=0, item; item = panels[i]; i++) {
             // Look no need to do list[i] in the body of the loop
-            // console.log("Looping: index ", i, "item" + item);
             item.style.opacity = 0.2
         }
 
@@ -430,7 +416,6 @@ document.addEventListener('DOMContentLoaded', () => {
     })
 
     modSelPopupClose.addEventListener('click', () => {
-        console.log('Closing popup')
         modSelPopup.style.display = 'none'
 
         var panels = [
@@ -449,7 +434,6 @@ document.addEventListener('DOMContentLoaded', () => {
         sidebar.style.opacity = 1
         for (var i=0, item; item = panels[i]; i++) {
             // Look no need to do list[i] in the body of the loop
-            // console.log("Looping: index ", i, "item" + item);
             item.style.opacity = 1
         }
 
@@ -532,7 +516,6 @@ document.addEventListener('DOMContentLoaded', () => {
         modPlaceholder.appendChild(selectBtn)
 
         function flush() {
-            console.log('flushing')
 
             // flush
             modResultsTable.innerHTML = `
@@ -575,7 +558,6 @@ document.addEventListener('DOMContentLoaded', () => {
             sidebar.style.opacity = 1
             for (var i=0, item; item = panels[i]; i++) {
                 // Look no need to do list[i] in the body of the loop
-                // console.log("Looping: index ", i, "item" + item);
                 item.style.opacity = 1
             }
         })
@@ -602,10 +584,8 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     searchModuleBtn.addEventListener('click', () => {
-        console.log('Searching')
         // get the results from the text field
         var moduleCode = popupResultSubjectInput.value
-        console.log(moduleCode)
 
         popupResultBannerTitle.innerHTML = `Select a Class for Module ${moduleCode} <i class="fas fa-info-circle" style="color: #54a0ff; padding-left: 5px;"></i>`
 
@@ -630,7 +610,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
         for (var i=0, cb, box; cb = mods[i], box=items[i]; i++) {
             // Look no need to do list[i] in the body of the loop
-            // console.log("Looping: index ", i, "item" + item);
             if (cb.checked) {
                 dropCurModsContainer.removeChild(box)
             }

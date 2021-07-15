@@ -113,7 +113,7 @@ const ALLMODS = `{
     },
     "CS2040": {
         "name": "CS2040",
-        "detailed-name": "Data Structures and Algorithm ",
+        "detailed-name": "Data Structures and Algorithms",
         "vacancy": "600",
         "occupancy": 153,
         "lecture-id": "L-L1-1226",
@@ -260,6 +260,10 @@ const ALLMODS = `{
 document.addEventListener('DOMContentLoaded', () => {
     console.log('App loaded.')
 
+    const header = document.getElementById('header')
+    const sidebar = document.getElementById('sidebar')
+    const playground = document.getElementsByClassName('panel')
+
     const aboutBtn = document.getElementById('about')
     const viewClassesBtn = document.getElementById('viewclasses')
     const modSelectBtn = document.getElementById('modselect')
@@ -382,6 +386,27 @@ document.addEventListener('DOMContentLoaded', () => {
         console.log('Adding class')
         modSelPopup.style.display = 'block'
 
+        var panels = [
+            aboutPanel, 
+            viewClassesPanel,
+            modSelectPanel,
+            modReqPanel,
+            selectTutPanel,
+            addSwapPanel,
+            dropPanel,
+            appealsPanel,
+            rickrollPanel
+        ]
+
+        // blur background
+        header.style.opacity = 0.2
+        sidebar.style.opacity = 0.2
+        for (var i=0, item; item = panels[i]; i++) {
+            // Look no need to do list[i] in the body of the loop
+            // console.log("Looping: index ", i, "item" + item);
+            item.style.opacity = 0.2
+        }
+
         popupResultSubjectInput.value = ''
         popupResultNbrInput.value = ''
         popupResultModTitleInput.value = ''
@@ -390,6 +415,26 @@ document.addEventListener('DOMContentLoaded', () => {
     modSelPopupClose.addEventListener('click', () => {
         console.log('Closing popup')
         modSelPopup.style.display = 'none'
+
+        var panels = [
+            aboutPanel, 
+            viewClassesPanel,
+            modSelectPanel,
+            modReqPanel,
+            selectTutPanel,
+            addSwapPanel,
+            dropPanel,
+            appealsPanel,
+            rickrollPanel
+        ]
+
+        header.style.opacity = 1
+        sidebar.style.opacity = 1
+        for (var i=0, item; item = panels[i]; i++) {
+            // Look no need to do list[i] in the body of the loop
+            // console.log("Looping: index ", i, "item" + item);
+            item.style.opacity = 1
+        }
 
         flush()    
     })
@@ -496,6 +541,26 @@ document.addEventListener('DOMContentLoaded', () => {
             curRank += 1
 
             flush()
+            
+            var panels = [
+                aboutPanel, 
+                viewClassesPanel,
+                modSelectPanel,
+                modReqPanel,
+                selectTutPanel,
+                addSwapPanel,
+                dropPanel,
+                appealsPanel,
+                rickrollPanel
+            ]
+    
+            header.style.opacity = 1
+            sidebar.style.opacity = 1
+            for (var i=0, item; item = panels[i]; i++) {
+                // Look no need to do list[i] in the body of the loop
+                // console.log("Looping: index ", i, "item" + item);
+                item.style.opacity = 1
+            }
         })
 
         mod.appendChild(modClass)
@@ -510,7 +575,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
     function searchMods(key) {
         const allmods = JSON.parse(ALLMODS)
-        console.log(allmods)
 
         if (allmods[key] != undefined) {
             // module found

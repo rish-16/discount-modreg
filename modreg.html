@@ -10,6 +10,14 @@
         <link rel="stylesheet" href="modreg_styles.css">
         <title>Homepage</title>
     </head>
+
+    <script>
+        function removeMod(item) {
+            const container = document.getElementById('drop-mod-container')
+            container.removeChild(item)
+            console.log(item)
+        }
+    </script>
     
     <body>
         <div id="header">
@@ -237,7 +245,42 @@
         
         <div class="panel" id="addswap-panel"></div>
         
-        <div class="panel" id="drop-panel"></div>
+        <div class="panel" id="drop-panel">
+            <p id="drop-banner-title">Select Classes to drop</p>
+
+            <div id="drop-mod-container">
+                <div id="drop-container-header">
+                    <p style="width: 10%;">Module</p>
+                    <p style="width: 15%;">Class</p>
+                    <p style="width: 10%;">Activity</p>
+                    <p style="width: 10%;">Session</p>
+                    <p style="width: 10%;">Units</p>
+                    <p style="width: 20%;">Select</p>
+                </div>
+
+                <div class="drop-container-item">
+                    <p style="width: 10%;">CS1101S</p>
+                    <p style="color: #62abc4; width: 15%;">L-L1-1226</p>
+                    <p style="width: 10%;">Lecture</p>
+                    <p style="width: 10%;">Regular</p>
+                    <p style="width: 10%;">4.00</p>
+                    <p style="width: 20%">
+                        <button class="mod-drop-select-btn">Drop</button>
+                    </p>
+                </div>
+
+                <div class="drop-container-item">
+                    <p style="width: 10%;">GER1000</p>
+                    <p style="color: #62abc4; width: 15%;">L-L32-2341</p>
+                    <p style="width: 10%;">Tutorial</p>
+                    <p style="width: 10%;">Regular</p>
+                    <p style="width: 10%;">4.00</p>
+                    <p style="width: 20%">
+                        <button class="mod-drop-select-btn">Drop</button>
+                    </p>
+                </div>
+            </div>            
+        </div>
         
         <div class="panel" id="appeals-panel"></div>
 

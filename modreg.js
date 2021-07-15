@@ -302,7 +302,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // load the about panel on page load
     pageTitle.innerText = 'About ModReg@EduRec'
-    dropPanel.style.display = 'block'
+    aboutBtn.style.display = 'block'
 
     function switchPanel(idx) {
         var panels = [

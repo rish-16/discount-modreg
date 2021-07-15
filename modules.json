@@ -71,6 +71,14 @@
         "lecture-id": "L-L1-1226",
         "units": "4.00"
     },
+    "CS2030S": {
+        "name": "CS2030S",
+        "detailed-name": "Programming Methodology II",
+        "vacancy": "600",
+        "occupancy": 153,
+        "lecture-id": "L-L1-1226",
+        "units": "4.00"
+    },
     "CS1010J": {
         "name": "CS1010J",
         "detailed-name": "Programming Methodology",

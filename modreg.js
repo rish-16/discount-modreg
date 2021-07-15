@@ -439,12 +439,12 @@ document.addEventListener('DOMContentLoaded', () => {
         flush()    
     })
 
-    function addModToTable(modTitleText, modUnitText, modRankText) {
+    function addModToTable(code, modTitleText, modUnitText, modRankText) {
         var mod = document.createElement('div')
         mod.classList += 'mod'
 
         var modTitle = document.createElement('p')
-        modTitle.innerText = modTitleText
+        modTitle.innerText = code + ' ' + modTitleText
         modTitle.classList += 'mod-title'
 
         var modUnit = document.createElement('p')
@@ -537,7 +537,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
         selectBtn.addEventListener('click', () => {
             modSelPopup.style.display = 'none' // hide search popup
-            addModToTable(details['detailed-name'], details['units'], curRank)
+            addModToTable(details['name'], details['detailed-name'], details['units'], curRank)
             curRank += 1
 
             flush()

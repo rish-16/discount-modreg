@@ -2,7 +2,7 @@ html, body {
     height: 100%;
     padding: 0;
     margin: 0;
-    font-family: Avenir Next;
+    font-family: Karla, Avenir Next;
 }
 
 /* --------------------------------------------------------------------------------------------------- */
@@ -23,7 +23,7 @@ html, body {
 #header #selector {
     margin: auto 0;
     border: none;
-    font-family: Avenir Next;
+    font-family: Karla, Avenir Next;
     outline: none
 }
 

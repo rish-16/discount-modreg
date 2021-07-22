@@ -483,6 +483,26 @@ document.addEventListener('DOMContentLoaded', () => {
         modContainerTable.appendChild(mod)
     }
 
+    function flush() {
+
+        // flush
+        modResultsTable.innerHTML = `
+        <div id="modsel-search-result-header">
+            <p style="width: 20%; font-weight: bold;">Class</p>
+            <p style="width: 20%; font-weight: bold;">Activity</p>
+            <p style="width: 10%; font-weight: bold;">Session</p>
+            <p style="width: 10%; font-weight: bold;">Vacancy</p>
+            <p style="width: 25%; font-weight: bold;">Students Selected</p>
+            <p style="width: 15%; font-weight: bold;"></p>
+        </div>`
+
+        popupResultSubjectInput.value = ''
+        popupResultNbrInput.value = ''
+        popupResultModTitleInput.value = ''
+
+        popupResultBannerTitle.innerHTML = ''
+    }
+
     function addModToResults(details) {
         var mod = document.createElement('div')
         mod.classList += 'mod-res'
@@ -514,26 +534,6 @@ document.addEventListener('DOMContentLoaded', () => {
         selectBtn.innerHTML = 'Select'
         selectBtn.classList += 'mod-res-select-btn'
         modPlaceholder.appendChild(selectBtn)
-
-        function flush() {
-
-            // flush
-            modResultsTable.innerHTML = `
-            <div id="modsel-search-result-header">
-                <p style="width: 20%; font-weight: bold;">Class</p>
-                <p style="width: 20%; font-weight: bold;">Activity</p>
-                <p style="width: 10%; font-weight: bold;">Session</p>
-                <p style="width: 10%; font-weight: bold;">Vacancy</p>
-                <p style="width: 25%; font-weight: bold;">Students Selected</p>
-                <p style="width: 15%; font-weight: bold;"></p>
-            </div>`
-
-            popupResultSubjectInput.value = ''
-            popupResultNbrInput.value = ''
-            popupResultModTitleInput.value = ''
-
-            popupResultBannerTitle.innerHTML = ''
-        }
 
         selectBtn.addEventListener('click', () => {
             modSelPopup.style.display = 'none' // hide search popup
